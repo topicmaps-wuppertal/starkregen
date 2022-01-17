@@ -15,6 +15,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Login to GitHub private NPM registry
+        env:
+          CI_ACCESS_TOKEN: ${{ secrets.NPM_READ_RAINHAZARDMAPS }}
+        shell: bash
+        run: |
+          npm install -g npm-cli-login
+          npm-cli-login -u "helllth" -p "${CI_ACCESS_TOKEN}" -e "th@cismet.de" -r "https://npm.pkg.github.com" -s "@helllth"
       - name: Install Packages
         run: yarn install
       - name: prepare 0
