@@ -26,11 +26,10 @@ jobs:
       - name: Debug .npmrc
         run: cat .npmrc
       - name: Install Packages
-        shell: bash
         run: yarn install
       - name: cleanup .npmrc
-          shell: bash
-          run: rm .npmrc 
+        shell: bash
+        run: rm .npmrc
       - name: prepare 0
         run: touch .version && touch .githash && yarn run postversion
       - name: prepare 1 (version stuff)
