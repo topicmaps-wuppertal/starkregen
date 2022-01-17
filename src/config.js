@@ -74,17 +74,17 @@ const config = {
   backgrounds: [
     {
       layerkey: "hillshade|bplan_abkg@30|wupp-plan-live@20",
-      src: "/images/rain-hazard-map-bg/topo.png",
+      src: "/starkregen/images/rain-hazard-map-bg/topo.png",
       title: "Top. Karte",
     },
     {
       layerkey: "trueOrtho2020@50|rvrSchrift@100|wupp-plan-live@20",
-      src: "/images/rain-hazard-map-bg/ortho.png",
+      src: "/starkregen/images/rain-hazard-map-bg/ortho.png",
       title: "Luftbildkarte",
     },
     {
       layerkey: "wupp-plan-live@40",
-      src: "/images/rain-hazard-map-bg/citymap.png",
+      src: "/starkregen/images/rain-hazard-map-bg/citymap.png",
       title: "Stadtplan",
     },
   ],
