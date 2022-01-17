@@ -17,11 +17,11 @@ const Component = () => {
         <div>
           <p>
             Die Starkregengefahrenkarte Wuppertal stellt in zwei umschaltbaren Kartenansichten
-            maximale Wasserstände bzw. maximale Fließgeschwindigkeiten dar, die im Verlauf von
+            maximale Wassertiefen bzw. maximale Fließgeschwindigkeiten dar, die im Verlauf von
             simulierten Starkregenereignissen auftreten. Dazu wird ein Raster mit einer Kantenlänge
-            von 1 m benutzt. Die Wasserstände und Fließgeschwindigkeiten werden jeweils mit einem
-            Farbverlauf visualisiert. Der Farbverlauf für die <strong>Wasserstände</strong> benutzt
-            die Eckwerte 20 cm (blau), 40 cm (gelb), 75 cm (orange) und 100 cm (rot). Wasserstände
+            von 1 m benutzt. Die Wassertiefen und Fließgeschwindigkeiten werden jeweils mit einem
+            Farbverlauf visualisiert. Der Farbverlauf für die <strong>Wassertiefen</strong> benutzt
+            die Eckwerte 20 cm (blau), 40 cm (gelb), 75 cm (orange) und 100 cm (rot). Wassertiefen
             unter 10 cm werden nicht farbig ausgeprägt (transparente Darstellung). Zur
             Visualisierung der <strong>Fließgeschwindigkeiten</strong>, angegeben in Meter pro
             Sekunde (m/s), werden die Eckwerte 0,5 m/s (gelb), 2,0 m/s (orange), 4,0 m/s (hellrot)
@@ -58,7 +58,7 @@ const Component = () => {
           </p>
 
           <p>
-            Zur Betrachtung der Wasserstände stellen wir Ihnen drei verschiedene Hintergrundkarten
+            Zur Betrachtung der Wassertiefen stellen wir Ihnen drei verschiedene Hintergrundkarten
             bereit, die auf den folgenden Geodatendiensten und Geodaten basieren:
           </p>
 

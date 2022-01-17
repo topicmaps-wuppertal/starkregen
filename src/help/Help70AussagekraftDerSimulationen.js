@@ -49,12 +49,12 @@ const Component = () => {
             Wenn es z. B. in den Tagen vor dem angenommenen Starkregenereignis schon so viel
             geregnet hätte, dass der Boden mit Wasser gesättigt ist, würde der Effekt der
             Versickerung ja tatsächlich wegfallen! Es bleibt aber eine gewisse Tendenz zur lokalen
-            Überzeichnung der Wasserstände, die sich bei einem realen Regen der angenommenen Stärke
+            Überzeichnung der Wassertiefen, die sich bei einem realen Regen der angenommenen Stärke
             einstellen würden. Um diesem Umstand Rechnung zu tragen, geben wir bei der{" "}
-            <a className='renderAsLink' onClick={() => setAppMenuActiveMenuSection("wasserstand")}>
-              Abfrage des maximalen Wasserstandes oder der maximalen Fließgeschwindigkeit
+            <a class='renderAsLink' onClick={() => setAppMenuActiveMenuSection("wasserstand")}>
+              Abfrage der maximalen Wassertiefe oder der maximalen Fließgeschwindigkeit
             </a>{" "}
-            ab einem berechneten Wasserstand von 150 cm nur noch "größer als 150 cm" ({">"} 150 cm)
+            ab einer berechneten Wassertiefe von 150 cm nur noch "größer als 150 cm" ({">"} 150 cm)
             und ab einer berechneten Fließgeschwindigkeit von 6 m/s nur noch "{">"} 6 m/s" als
             Ergebnis an.
           </p>
@@ -70,7 +70,7 @@ const Component = () => {
             Fehler aufweisen. Helfen Sie uns dabei, das DGM sukzessive zu verbessern, indem Sie uns
             vermutete{" "}
             <a
-              className='renderAsLink'
+              class='renderAsLink'
               onClick={() => setAppMenuActiveMenuSection("modellfehlermelden")}
             >
               Fehler im Geländemodell melden

@@ -244,7 +244,7 @@ export const createGetFeatureInfoControls = (state, setX, currentZoom, history, 
           }
           title={
             state.displayMode === starkregenConstants.SHOW_HEIGHTS
-              ? "Maximalen Wasserstand abfragen"
+              ? "Maximalen Wassertiefe abfragen"
               : "Maximale Fließgeschwindigkeit abfragen"
           }
         />,
