@@ -1,52 +1,139 @@
-import { useEffect } from "react";
-
-import "./App.css";
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "leaflet/dist/leaflet.css";
-import "react-bootstrap-typeahead/css/Typeahead.css";
-import "react-cismap/topicMaps.css";
-import { md5FetchText, fetchJSON } from "react-cismap/tools/fetching";
+import React, { useEffect, useState } from "react";
+import { MappingConstants } from "react-cismap";
+import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
+import { md5FetchText } from "react-cismap/tools/fetching";
+import HeavyRainHazardMap from "@cismet-dev/react-cismap-rainhazardmaps/HeavyRainHazardMap";
+import GenericModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
+import Datengrundlage from "./help/Help10Datengrundlage";
+import Karteninhalt from "react-cismap/topicmaps/rainhazards/components/customizablehelp/Help20Karteninhalt";
+import InKartePositionieren from "./help/Help30InKartePositionieren";
+import MeinStandort from "./help/Help40MeinStandort";
+import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
+import SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
+import Aussagekraft from "./help/Help70AussagekraftDerSimulationen";
+import ModellfehlerMelden from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help80ModellfehlerMelden";
+import Haftungsausschluss from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help90Haftungsausschluss";
+import Footer from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help99Footer";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
 
-import TopicMapContextProvider from "react-cismap/contexts/TopicMapContextProvider";
-import { getClusterIconCreatorFunction } from "react-cismap/tools/uiHelper";
-import TopicMapComponent from "react-cismap/topicmaps/TopicMapComponent";
-import FeatureCollection from "react-cismap/FeatureCollection";
-import GenericInfoBoxFromFeature from "react-cismap/topicmaps/GenericInfoBoxFromFeature";
-import getGTMFeatureStyler from "react-cismap/topicmaps/generic/GTMStyler";
-
-const host = "https://wupp-topicmaps-data.cismet.de";
-
-const getGazData = async (setGazData) => {
-  const prefix = "GazDataForStories";
-  const sources = {};
-
-  sources.adressen = await md5FetchText(prefix, host + "/data/adressen.json");
-  sources.bezirke = await md5FetchText(prefix, host + "/data/bezirke.json");
-  sources.quartiere = await md5FetchText(prefix, host + "/data/quartiere.json");
-  sources.pois = await md5FetchText(prefix, host + "/data/pois.json");
-  sources.kitas = await md5FetchText(prefix, host + "/data/kitas.json");
-
-  const gazData = getGazDataForTopicIds(sources, [
-    "pois",
-    "kitas",
-    "bezirke",
-    "quartiere",
-    "adressen",
-  ]);
-
-  setGazData(gazData);
-};
+import config from "./config";
+import { getApplicationVersion } from "./version";
 
 function App() {
+  const email = "starkregen@stadt.wuppertal.de";
   const [gazData, setGazData] = useState([]);
+
+  const getGazData = async (setData) => {
+    const prefix = "GazDataForStarkregengefahrenkarteByCismet";
+    const sources = {};
+
+    sources.geps = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/geps.json"
+    );
+    sources.geps_reverse = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/geps_reverse.json"
+    );
+    sources.adressen = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/adressen.json"
+    );
+    sources.bezirke = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/bezirke.json"
+    );
+    sources.quartiere = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/quartiere.json"
+    );
+    sources.pois = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/pois.json"
+    );
+    sources.kitas = await md5FetchText(
+      prefix,
+      "https://wunda-geoportal.cismet.de/data/3857/kitas.json"
+    );
+
+    const gazData = getGazDataForTopicIds(sources, [
+      "geps",
+      "geps_reverse",
+      "pois",
+      "kitas",
+      "quartiere",
+      "bezirke",
+      "adressen",
+    ]);
+
+    setData(gazData);
+  };
+
   useEffect(() => {
     getGazData(setGazData);
   }, []);
   return (
-    <TopicMapContextProvider>
-      <TopicMapComponent gazData={gazData}></TopicMapComponent>
+    <TopicMapContextProvider
+      appKey={"cismetRainhazardMap.Wuppertal"}
+      referenceSystem={MappingConstants.crs3857}
+      referenceSystemDefinition={MappingConstants.proj4crs3857def}
+      infoBoxPixelWidth={370}
+    >
+      <HeavyRainHazardMap
+        appMenu={
+          <GenericModalApplicationMenu
+            menuIntroduction={
+              <span>
+                Bitte wählen Sie eine der folgenden farbigen Schaltflächen, um sich weitere
+                Informationen zu dem entsprechenden Thema anzeigen zu lassen:
+              </span>
+            }
+            menuIcon='info'
+            menuTitle='Kompaktanleitung und Hintergrundinformationen'
+            menuSections={[
+              <Datengrundlage key='Datengrundlage' />,
+              <Karteninhalt key='Karteninhalt' simulationsklammer='Stärke 6, Stärke 10' />,
+              <InKartePositionieren key='InKartePositionieren' />,
+              <MeinStandort key='MeinStandort' />,
+              <WasserstandAbfragen key='Wasserstand' />,
+              <SimulierteSzenarien key='SimulierteSzenarien' />,
+              <Aussagekraft key='Aussagekraft' />,
+              <ModellfehlerMelden key='ModellfehlerMelden' email={email} />,
+              <Haftungsausschluss key='Haftungsausschluss' />,
+            ]}
+            menuFooter={
+              <Footer
+                appName='Starkregengefahrenkarte Wuppertal'
+                version={getApplicationVersion()}
+                hintergrundkartenText='True Orthophoto 2020, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | WebAtlasDE © BKG'
+                taglineModelling={
+                  <div>
+                    <b>Modellierung und Simulationsberechnung</b> (Version 2.0 | 12/2020):{" "}
+                    <a
+                      target='_customer'
+                      href='https://www.wsw-online.de/wsw-energie-wasser/privatkunden/'
+                    >
+                      WSW Energie und Wasser AG
+                    </a>{" "}
+                    |{" "}
+                    <a target='_pecher' href='https://www.pecher.de/'>
+                      Dr. Pecher AG (Erkrath)
+                    </a>
+                  </div>
+                }
+              />
+            }
+          />
+        }
+        emailaddress={email}
+        initialState={config.initialState}
+        config={config.config}
+        homeZoom={18}
+        homeCenter={[51.27202324060668, 7.20162372978018]}
+        modeSwitcherTitle='Starkregenkarte Wuppertal'
+        documentTitle='Starkregenkarte Wuppertal'
+        gazData={gazData}
+      />
     </TopicMapContextProvider>
   );
 }
