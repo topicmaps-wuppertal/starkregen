@@ -15,15 +15,22 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Login to GitHub private NPM registry
+      - name: create tmp .npmrc
         env:
           CI_ACCESS_TOKEN: ${{ secrets.NPM_READ_RAINHAZARDMAPS }}
         shell: bash
         run: |
-          npm install -g npm-cli-login
-          npm-cli-login -u "helllth" -p "${CI_ACCESS_TOKEN}" -e "th@cismet.de" -r "https://npm.pkg.github.com" -s "@helllth"
+          echo @cismet-dev:registry=https://npm.pkg.github.com/ > .npmrc
+          echo //npm.pkg.github.com/:_authToken=${CI_ACCESS_TOKEN} >> .npmrc
+          echo registry=https://registry.npmjs.org >> .npmrc
+      - name: Debug .npmrc
+        run: cat .npmrc
       - name: Install Packages
+        shell: bash
         run: yarn install
+      - name: cleanup .npmrc
+          shell: bash
+          run: rm .npmrc 
       - name: prepare 0
         run: touch .version && touch .githash && yarn run postversion
       - name: prepare 1 (version stuff)
