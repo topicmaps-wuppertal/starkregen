@@ -2627,10 +2627,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.6.2":
-  version "1.6.2"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.6.2/0994690e8ddb75299a3855b15d3e1c28ab4f8707aee1a8a9312cd0961c6997ee#fc3a0e1412f3088ec1ebc65097cc2db00af76371"
-  integrity sha512-J98WjwLzp/zKfOGo146T0F3Zri+3xUCb2GmEJfO/BPwT9XUHAo5qvr0xKo6LQysjGBcSWX+HcGiTY5tC+DW+MA==
+"@cismet-dev/react-cismap-rainhazardmaps@1.6.3":
+  version "1.6.3"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.6.3/79c2705df674a02871102d5e6ce3da4cb438961eb53956d82827a644c5d52488#36497f5c752608ba5b76d92c5751def7373bcb1f"
+  integrity sha512-oVTWQ7M4w6fe+Rv5gF5jIw1O7NhspXomxs9pxZW6V/W8+MbwXPmOn6MQXDDqb6q6QvIrVSiYVjnOVp2WI6vMAw==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
@@ -11116,7 +11116,7 @@ polygon-clipping@^0.15.3:
   dependencies:
     splaytree "^3.1.0"
 
-"polylabel@github:mapbox/polylabel":
+polylabel@mapbox/polylabel:
   version "1.1.0"
   resolved "https://codeload.github.com/mapbox/polylabel/tar.gz/19d391cf95e8b756cd0663158fb2a54428b0553e"
   dependencies:

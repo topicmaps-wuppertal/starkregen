@@ -125,6 +125,7 @@ function App() {
             }
           />
         }
+        gazetteerSearchPlaceholder='Stadtteil | Adresse | POI | GEP'
         emailaddress={email}
         initialState={config.initialState}
         config={config.config}
