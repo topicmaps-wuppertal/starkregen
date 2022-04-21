@@ -5,7 +5,7 @@ import { md5FetchText } from "react-cismap/tools/fetching";
 import HeavyRainHazardMap from "@cismet-dev/react-cismap-rainhazardmaps/HeavyRainHazardMap";
 import GenericModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 import Datengrundlage from "./help/Help10Datengrundlage";
-import Karteninhalt from "react-cismap/topicmaps/rainhazards/components/customizablehelp/Help20Karteninhalt";
+import Karteninhalt from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help20Karteninhalt";
 import InKartePositionieren from "./help/Help30InKartePositionieren";
 import MeinStandort from "./help/Help40MeinStandort";
 import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
