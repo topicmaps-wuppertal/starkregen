@@ -2634,10 +2634,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.7.2":
-  version "1.7.2"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.2/71181891525844e2ecec9e974a69f2c329e42b59bc73cee45e28779a97ad425e#84b4b2fc08f785d401bdf4edfed2c493b4437168"
-  integrity sha512-MfeEmQ2+v2t7otzrFjash+HnCPdfiA1FJ2D+DBeGPs3q/uoC34TULRk0js0AqeTZq5mICbK3jUlUOFOT5VbS1w==
+"@cismet-dev/react-cismap-rainhazardmaps@1.7.3":
+  version "1.7.3"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.3/697925482bd4fdb4b7f6abc79a0967e878d6adc4f1d82d67a5d2d8fe637cfe9d#cf9bb0f944086f3a321373863127a9c9e857d9f3"
+  integrity sha512-Hie0wSvX5JOtG1PZW+y629fcPRdgZ3YCj//7jiMUJfXfDMZxKyie0kmDQr6G5hPygSjxWpIuEr6ZBISx0Ad92Q==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
@@ -2651,7 +2651,7 @@
     proj4leaflet "^1.0.2"
     query-string "^7.1.0"
     react "^16.11"
-    react-cismap "1.8.1"
+    react-cismap "1.8.2"
     react-dom "^16.11"
     react-leaflet "^1.6.4"
     react-scripts "5.0.0"
@@ -11226,7 +11226,7 @@ polygon-clipping@^0.15.3:
   dependencies:
     splaytree "^3.1.0"
 
-polylabel@mapbox/polylabel:
+"polylabel@github:mapbox/polylabel":
   version "1.1.0"
   resolved "https://codeload.github.com/mapbox/polylabel/tar.gz/19d391cf95e8b756cd0663158fb2a54428b0553e"
   dependencies:
@@ -12460,10 +12460,10 @@ react-chartkick@^0.4.1:
   dependencies:
     chartkick "^3.2.0"
 
-react-cismap@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.8.1.tgz#0ac2f49e56993f366542c61db70131898a3525e0"
-  integrity sha512-Srj4mio6ZHklSrzDqCOXCq/n34fEhbDY76wmgq930ABRd0FAg1uHUAeQDTm13utrMWmCY11Lr6L1p2OUv+9KLg==
+react-cismap@1.8.2:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.8.2.tgz#a32b2b4385514503aae059540be463b30786dc81"
+  integrity sha512-giKnHswbrQ8amS8vpFVksZMmVcU4z/xER3sGoESn2SRiu3lrVtOCy1qaLVFm8IwVZaXygDVfYNKcwr5iI+gZ3A==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.12.0"
     "@fortawesome/fontawesome-svg-core" "^1.2.26"
