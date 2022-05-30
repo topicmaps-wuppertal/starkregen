@@ -18,7 +18,7 @@ const Component = ({ appName }) => {
             zusammengestellt und kontrolliert. Dennoch sind Fehler nie ausgeschlossen, sodass für
             die Richtigkeit und damit auch Nutzbarkeit der Informationen keine Gewähr übernommen
             werden kann (vgl. auch Abschnitt{" "}
-            <a class='renderAsLink' onClick={() => setAppMenuActiveMenuSection("wasserstand")}>
+            <a class='renderAsLink' onClick={() => setAppMenuActiveMenuSection("aussagekraft")}>
               Aussagekraft der Simulationen
             </a>{" "}
             zu den beim heutigen Stand der Technik unvermeidbaren Unschärfen und Fehlern von
