@@ -73,7 +73,7 @@ const config = {
   ],
   backgrounds: [
     {
-      layerkey: "hillshade|bplan_abkg@30|wupp-plan-live@20",
+      layerkey: "hillshade|bplan_abkg@30|rvrGrundriss@20",
       src: "/starkregen/images/rain-hazard-map-bg/topo.png",
       title: "Top. Karte",
     },
