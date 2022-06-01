@@ -2634,10 +2634,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.7.8":
-  version "1.7.8"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.8/fbe0545a3352ab2a360f5ca11d17fe9617570477d047e0dd0d3df4603549e835#7cd0cdaab57672ccf9c9fc637c719d85f686073f"
-  integrity sha512-ZjA3NU4BU7/J1PZtOxZqztFtUHxfoLi8lJPs13qKm1Zk/KaF2dyrz6asKjV7kvYW8vrh4N/y8QAjnUsbkhuevg==
+"@cismet-dev/react-cismap-rainhazardmaps@1.7.9":
+  version "1.7.9"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.9/0e51418e77b06dd3d340003cbe208f7902561f11cb240b8e124c4bb4eff5c8e6#9c4f04bbfefbb9a91d614dec877e749aad8bbb1b"
+  integrity sha512-5TWJxt1NIDSv725qumuWiMUsmcNTKeoZbUnP6c4/jvtCN9TkAWKqvmNbersvu0Irrb6nvdXKNMxCAV9AJbOL/w==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
@@ -2651,7 +2651,7 @@
     proj4leaflet "^1.0.2"
     query-string "^7.1.0"
     react "^16.11"
-    react-cismap "^1.8.6"
+    react-cismap "^1.8.7"
     react-dom "^16.11"
     react-leaflet "^1.6.4"
     react-scripts "5.0.0"
@@ -12460,10 +12460,10 @@ react-chartkick@^0.4.1:
   dependencies:
     chartkick "^3.2.0"
 
-react-cismap@^1.8.6:
-  version "1.8.6"
-  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.8.6.tgz#0dbe552fa958b707b4d2878e2883efd1a4e75e3d"
-  integrity sha512-VoXDGr5QU1Gp0QE7S9DZ4dfywqxghGXOPbDrhTIJfA4DLr79B90OTsvVvzvGV9uTH8DxPQCsE4kvUAiiz4B34g==
+react-cismap@^1.8.7:
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.8.7.tgz#daf419892854040f9a73068d07d13c335a685d84"
+  integrity sha512-BbzTXsnEauYZv6pLNverNAQJOlUrYvWdSXvABGnlFBpulHO5KEm+Uku/ceal4pfOLbpvim6RXq9luFA/CZiSSA==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.12.0"
     "@fortawesome/fontawesome-svg-core" "^1.2.26"
