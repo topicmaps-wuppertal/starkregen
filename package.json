@@ -1,6 +1,6 @@
 {
   "name": "rainhazardmap-wuppertal",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "private": true,
   "dependencies": {
     "@cismet-dev/react-cismap-rainhazardmaps": "1.7.8",
