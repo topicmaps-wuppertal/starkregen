@@ -78,7 +78,7 @@ const config = {
       title: "Top. Karte",
     },
     {
-      layerkey: "rvrGrundriss@100|trueOrtho2020@75|rvrSchriftNT@100",
+      layerkey: "rvrGrundriss@100|trueOrtho2022@75|rvrSchriftNT@100",
       src: "/starkregen/images/rain-hazard-map-bg/ortho.png",
       title: "Luftbildkarte",
     },

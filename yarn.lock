@@ -2634,10 +2634,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.7.9":
-  version "1.7.9"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.9/0e51418e77b06dd3d340003cbe208f7902561f11cb240b8e124c4bb4eff5c8e6#9c4f04bbfefbb9a91d614dec877e749aad8bbb1b"
-  integrity sha512-5TWJxt1NIDSv725qumuWiMUsmcNTKeoZbUnP6c4/jvtCN9TkAWKqvmNbersvu0Irrb6nvdXKNMxCAV9AJbOL/w==
+"@cismet-dev/react-cismap-rainhazardmaps@1.7.11":
+  version "1.7.11"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.11/f5f3cecaa884eabc12a15f623de5b10fe879feb938ffb3e1682bf7e859090f8b#54e6ac0b7530f53b0e1cbdc4f31b7a8cc2a4da2a"
+  integrity sha512-q4ZOm+ISBBrGuQyGPSzx1fluVtD/rfMnmYb4eQ53yT+J1XbICZVAXQSIHIoCSKBq9dxd7lGvaYaTslQ5Iyn+xg==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
@@ -2651,7 +2651,7 @@
     proj4leaflet "^1.0.2"
     query-string "^7.1.0"
     react "^16.11"
-    react-cismap "^1.8.7"
+    react-cismap "1.9.4"
     react-dom "^16.11"
     react-leaflet "^1.6.4"
     react-scripts "5.0.0"
@@ -3503,6 +3503,14 @@
   dependencies:
     "@turf/helpers" "^6.5.0"
     "@turf/invariant" "^6.5.0"
+
+"@turf/center@^6.5.0":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@turf/center/-/center-6.5.0.tgz#3bcb6bffcb8ba147430cfea84aabaed5dbdd4f07"
+  integrity sha512-T8KtMTfSATWcAX088rEDKjyvQCBkUsLnK/Txb6/8WUXIeOZyHu42G7MkdkHRoHtwieLdduDdmPLFyTdG5/e7ZQ==
+  dependencies:
+    "@turf/bbox" "^6.5.0"
+    "@turf/helpers" "^6.5.0"
 
 "@turf/envelope@^6.3.0":
   version "6.5.0"
@@ -10254,7 +10262,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-maplibre-gl@^1.13.0-rc.5:
+maplibre-gl@1.15.2:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/maplibre-gl/-/maplibre-gl-1.15.2.tgz#7fb47868b62455af916c090903f2154394450f9c"
   integrity sha512-uPeV530apb4JfX3cRFfE+awFnbcJTOnCv2QvY4mw4huiInbybElWYkNzTs324YLSADq0f4bidRoYcR81ho3aLA==
@@ -12460,10 +12468,10 @@ react-chartkick@^0.4.1:
   dependencies:
     chartkick "^3.2.0"
 
-react-cismap@^1.8.7:
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.8.7.tgz#daf419892854040f9a73068d07d13c335a685d84"
-  integrity sha512-BbzTXsnEauYZv6pLNverNAQJOlUrYvWdSXvABGnlFBpulHO5KEm+Uku/ceal4pfOLbpvim6RXq9luFA/CZiSSA==
+react-cismap@1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.9.4.tgz#7c5b41af59b86c9725ee9a2005e2bbc27cb93185"
+  integrity sha512-96bl2FCLzCuH+igf7AeoVwqLcGT3UEs8LYYSdUK9h7pqOUCV31og2Q0VLyuJrd0xb6V4y5Q0Yejnrwk16Jz9/Q==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.12.0"
     "@fortawesome/fontawesome-svg-core" "^1.2.26"
@@ -12477,6 +12485,7 @@ react-cismap@^1.8.7:
     "@turf/bbox" "^6.0.1"
     "@turf/bbox-polygon" "^6.0.1"
     "@turf/boolean-intersects" "^6.3.0"
+    "@turf/center" "^6.5.0"
     "@turf/envelope" "^6.3.0"
     "@turf/helpers" "^6.1.4"
     "@turf/inside" "^5.0.0"
@@ -12511,7 +12520,7 @@ react-cismap@^1.8.7:
     leaflet.path.drag "^0.0.6"
     localforage "^1.9.0"
     lodash "^4.17.20"
-    maplibre-gl "^1.13.0-rc.5"
+    maplibre-gl "1.15.2"
     md5 "^2.3.0"
     object-assign "^4.1.1"
     polylabel mapbox/polylabel
