@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.2b94f560.css",
-    "main.js": "./static/js/main.2653d993.js",
+    "main.css": "./static/css/main.300992f6.css",
+    "main.js": "./static/js/main.ead34b0f.js",
     "static/js/320.158b8ac4.chunk.js": "./static/js/320.158b8ac4.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "./static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/markers_default@2x.png": "./static/media/markers_default@2x.9593b3c72f31a3f4b403.png",
@@ -12,13 +12,15 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "./static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/MeinStandpunktMarkerDoppel.jpg": "./static/media/MeinStandpunktMarkerDoppel.e4a852718c8d263c78f1.jpg",
     "static/media/MeinStandpunktMarker.jpg": "./static/media/MeinStandpunktMarker.aec65d22b3fd2d2f5718.jpg",
+    "static/media/spinner-solid.svg": "./static/media/spinner-solid.bc3f17b395ea75d350fb.svg",
     "index.html": "./index.html",
-    "main.2b94f560.css.map": "./static/css/main.2b94f560.css.map",
-    "main.2653d993.js.map": "./static/js/main.2653d993.js.map",
+    "static/media/location-arrow-solid.svg": "./static/media/location-arrow-solid.0b7c9a27de87a0ec7420.svg",
+    "main.300992f6.css.map": "./static/css/main.300992f6.css.map",
+    "main.ead34b0f.js.map": "./static/js/main.ead34b0f.js.map",
     "320.158b8ac4.chunk.js.map": "./static/js/320.158b8ac4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b94f560.css",
-    "static/js/main.2653d993.js"
+    "static/css/main.300992f6.css",
+    "static/js/main.ead34b0f.js"
   ]
 }
