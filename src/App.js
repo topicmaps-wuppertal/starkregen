@@ -104,7 +104,7 @@ function App() {
             ]}
             menuFooter={
               <Footer
-                appName='Starkregengefahrenkarte Wuppertal'
+                appName='Starkregengefahrenkarte Wuppertal (Alpha)'
                 version={getApplicationVersion()}
                 hintergrundkartenText='True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | WebAtlasDE © BKG'
                 taglineModelling={
@@ -132,8 +132,8 @@ function App() {
         config={config.config}
         homeZoom={18}
         homeCenter={[51.27202324060668, 7.20162372978018]}
-        modeSwitcherTitle='Starkregengefahrenkarte'
-        documentTitle='Starkregengefahrenkarte Wuppertal'
+        modeSwitcherTitle='Starkregengefahrenkarte (Alpha)'
+        documentTitle='Starkregengefahrenkarte (Alpha) Wuppertal'
         gazData={gazData}
       />
     </TopicMapContextProvider>
