@@ -2634,10 +2634,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.7.13":
-  version "1.7.13"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.7.13/b7f0e37e1e24561740569be2b1fd35127be78f0e#b7f0e37e1e24561740569be2b1fd35127be78f0e"
-  integrity sha512-WUSDYPzBMnro7z4QEELHdwmieLHeL0jTneQ/tu7twnEfmKumlx3qn/hr6FqDHq23qVOEdUyxQSyTE4NEGiIsOw==
+"@cismet-dev/react-cismap-rainhazardmaps@1.8.1":
+  version "1.8.1"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.8.1/6af83a3c90f398497ad784aaf68b9b109f4fc1c7#6af83a3c90f398497ad784aaf68b9b109f4fc1c7"
+  integrity sha512-gRb+CPTiqsU94R+5boqSa+sOar6TyrH6reCr3ZcBW4clDRzm5a3K0gJQhUr5k9mbIV4hHpJRNkB4Q9mctc1x9Q==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
