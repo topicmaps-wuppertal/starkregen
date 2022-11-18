@@ -17,8 +17,8 @@ const Component = ({ uiState, uiStateActions }) => {
             Regenereignis, das Wuppertal an diesem Tag getroffen hat, in der Simulation
             nachzustellen. Hauptunterschied: Bei den Modellregen wird stets eine gleichartige
             flächenhafte Beregnung des gesamten Stadtgebietes angenommen. Das Regenereignis vom
-            29.05. hat dagegen nur ein Teilgebiet der Stadt getroffen. (Im Stadtbezirk Cronenberg hat
-            es an diesem Tag zum Beispiel fast gar nicht geregnet!)
+            29.05. hat dagegen nur ein Teilgebiet der Stadt getroffen. Im Stadtbezirk Cronenberg hat
+            es an diesem Tag zum Beispiel fast gar nicht geregnet!
           </p>
 
           <p>
