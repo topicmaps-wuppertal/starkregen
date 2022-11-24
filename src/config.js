@@ -10,7 +10,8 @@ const config = {
   minFeatureInfoZoom: 19,
   timeSeriesAvailable: true,
   rasterfariURL: "https://rain-rasterfari-wuppertal.cismet.de",
-  modelWMS: "https://starkregenwms-wuppertal.cismet.de/geoserver/wms?SERVICE=WMS",
+  modelWMS:
+    "https://starkregenwms-wuppertal.cismet.de/geoserver/wms?SERVICE=WMS",
 
   simulations: [
     {
@@ -83,8 +84,8 @@ const config = {
         "02h 00m",
       ],
       timeDimensionLayerX: [
-        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110,
-        115, 120,
+        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+        95, 100, 105, 110, 115, 120,
       ],
       velocityTimeDimensionLayers: [
         "starkregen:L_T50_steps_velocity3857_00h_05m",
@@ -205,8 +206,8 @@ const config = {
         "02h 00m",
       ],
       timeDimensionLayerX: [
-        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110,
-        115, 120,
+        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+        95, 100, 105, 110, 115, 120,
       ],
       velocityTimeDimensionLayers: [
         "starkregen:L_T100_steps_velocity3857_00h_05m",
@@ -327,8 +328,8 @@ const config = {
         "02h 00m",
       ],
       timeDimensionLayerX: [
-        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110,
-        115, 120,
+        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+        95, 100, 105, 110, 115, 120,
       ],
       velocityTimeDimensionLayers: [
         "starkregen:L_90mm_steps_velocity3857_00h_05m",
@@ -449,8 +450,8 @@ const config = {
         "02h 00m",
       ],
       timeDimensionLayerX: [
-        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110,
-        115, 120,
+        5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+        95, 100, 105, 110, 115, 120,
       ],
       velocityTimeDimensionLayers: [
         "starkregen:L_Extrem2018_steps_velocity3857_00h_05m",
@@ -508,7 +509,7 @@ const config = {
   ],
   backgrounds: [
     {
-      layerkey: "hillshade|bplan_abkg@30|rvrGrundriss@20",
+      layerkey: "basemap_relief@40",
       src: "/starkregen/images/rain-hazard-map-bg/topo.png",
       title: "Top. Karte",
     },
