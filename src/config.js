@@ -552,6 +552,8 @@ const initialState = {
   backgroundLayer: undefined,
   selectedBackground: 0,
   animationEnabled: true,
+  timeseriesIntermediateValuesCount: 50,
+  timeseriesAninationNumerator: 20,
 };
 
 const conf = { config, overridingBaseLayerConf, initialState };
