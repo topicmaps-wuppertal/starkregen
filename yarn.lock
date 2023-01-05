@@ -2634,10 +2634,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@1.9.0":
-  version "1.9.0"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.9.0/9687660b8dc3e3f28459559cef8a6c5863b3b446#9687660b8dc3e3f28459559cef8a6c5863b3b446"
-  integrity sha512-we04YpX6xCe6eC7d4cfhG2qwMBlDPAHe4RJHNXhwIDiV0fsRQNThay/gF/MtCXoX2llzGLNbzuS7nSI3t5BzNQ==
+"@cismet-dev/react-cismap-rainhazardmaps@~1.10.0":
+  version "1.10.0"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.10.0/913092b9a4d2233143ea2d8b552bb491929e87a6#913092b9a4d2233143ea2d8b552bb491929e87a6"
+  integrity sha512-rDMbdT2ZxEowqEaz6omyJnyNZs2QJYaYykgS0Z2O7BIXWD6G7dhLqnW1VXvff3PFilqTGcsxCfybx7Ic/IZF4g==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
@@ -2651,7 +2651,7 @@
     proj4leaflet "^1.0.2"
     query-string "^7.1.0"
     react "^16.11"
-    react-cismap "~1.13.0"
+    react-cismap "~1.14.0"
     react-dom "^16.11"
     react-leaflet "^1.6.4"
     react-scripts "5.0.0"
@@ -12473,10 +12473,10 @@ react-chartkick@^0.4.1:
   dependencies:
     chartkick "^3.2.0"
 
-react-cismap@~1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.13.0.tgz#760b202de2bb2a4d7d7659c59deac493149d3c02"
-  integrity sha512-7zsaQ3mBer1D5yb2Lw+laMjW04xOLNSzlU9VvCrn1kUIZWZ7DxYC+K7p5sOln0OkD1gWm90U01t8Up9J693GuA==
+react-cismap@~1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/react-cismap/-/react-cismap-1.14.0.tgz#8e9b5f605c6581fd69b564d8ba5ae4382a825957"
+  integrity sha512-zEO/MFQN+Mmir+bq0haIPcgpjYMmUm/+8VNAntvgueEU0Lo6yPsN7J9pf99yW7sBHv+yaZKXC0tfmpdt9gOHSw==
   dependencies:
     "@fortawesome/fontawesome-free" "^5.12.0"
     "@fortawesome/fontawesome-svg-core" "^1.2.26"
