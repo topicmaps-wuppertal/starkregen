@@ -509,7 +509,7 @@ const config = {
   ],
   backgrounds: [
     {
-      layerkey: "basemap_relief@40",
+      layerkey: "hillshade|bplan_abkg@30|rvrGrundriss@20",
       src: "/starkregen/images/rain-hazard-map-bg/topo.png",
       title: "Top. Karte",
     },
