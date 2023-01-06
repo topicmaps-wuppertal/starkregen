@@ -8,6 +8,7 @@ import Datengrundlage from "./help/Help10Datengrundlage";
 import Karteninhalt from "./help//Help20Karteninhalt";
 import InKartePositionieren from "./help/Help30InKartePositionieren";
 import MeinStandort from "./help/Help40MeinStandort";
+import ZeitlicherVerlauf from "./help/Help45ZeitlicherVerlauf";
 import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
 import SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
 import Aussagekraft from "./help/Help70AussagekraftDerSimulationen";
@@ -100,6 +101,7 @@ function App() {
               />,
               <InKartePositionieren key="InKartePositionieren" />,
               <MeinStandort key="MeinStandort" />,
+              <ZeitlicherVerlauf key="ZeitlicherVerlauf" />,
               <WasserstandAbfragen key="Wasserstand" />,
               <SimulierteSzenarien key="SimulierteSzenarien" />,
               <Aussagekraft key="Aussagekraft" />,
