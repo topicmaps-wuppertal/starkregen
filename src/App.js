@@ -5,7 +5,7 @@ import { md5FetchText } from "react-cismap/tools/fetching";
 import HeavyRainHazardMap from "@cismet-dev/react-cismap-rainhazardmaps/HeavyRainHazardMap";
 import GenericModalApplicationMenu from "react-cismap/topicmaps/menu/ModalApplicationMenu";
 import Datengrundlage from "./help/Help10Datengrundlage";
-import Karteninhalt from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help20Karteninhalt";
+import Karteninhalt from "./help//Help20Karteninhalt";
 import InKartePositionieren from "./help/Help30InKartePositionieren";
 import MeinStandort from "./help/Help40MeinStandort";
 import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
@@ -80,44 +80,49 @@ function App() {
       infoBoxPixelWidth={370}
     >
       <HeavyRainHazardMap
-        applicationMenuTooltipString='Anleitung | Hintergrund'
+        applicationMenuTooltipString="Anleitung | Hintergrund"
         appMenu={
           <GenericModalApplicationMenu
             menuIntroduction={
               <span>
-                Bitte wählen Sie eine der folgenden farbigen Schaltflächen, um sich weitere
-                Informationen zu dem entsprechenden Thema anzeigen zu lassen:
+                Bitte wählen Sie eine der folgenden farbigen Schaltflächen, um
+                sich weitere Informationen zu dem entsprechenden Thema anzeigen
+                zu lassen:
               </span>
             }
-            menuIcon='info'
-            menuTitle='Kompaktanleitung und Hintergrundinformationen'
+            menuIcon="info"
+            menuTitle="Kompaktanleitung und Hintergrundinformationen"
             menuSections={[
-              <Datengrundlage key='Datengrundlage' />,
-              <Karteninhalt key='Karteninhalt' simulationsklammer='Stärke 6, Stärke 10' />,
-              <InKartePositionieren key='InKartePositionieren' />,
-              <MeinStandort key='MeinStandort' />,
-              <WasserstandAbfragen key='Wasserstand' />,
-              <SimulierteSzenarien key='SimulierteSzenarien' />,
-              <Aussagekraft key='Aussagekraft' />,
-              <ModellfehlerMelden key='ModellfehlerMelden' email={email} />,
-              <Haftungsausschluss key='Haftungsausschluss' />,
+              <Datengrundlage key="Datengrundlage" />,
+              <Karteninhalt
+                key="Karteninhalt"
+                simulationsklammer={undefined}
+              />,
+              <InKartePositionieren key="InKartePositionieren" />,
+              <MeinStandort key="MeinStandort" />,
+              <WasserstandAbfragen key="Wasserstand" />,
+              <SimulierteSzenarien key="SimulierteSzenarien" />,
+              <Aussagekraft key="Aussagekraft" />,
+              <ModellfehlerMelden key="ModellfehlerMelden" email={email} />,
+              <Haftungsausschluss key="Haftungsausschluss" />,
             ]}
             menuFooter={
               <Footer
-                appName='Starkregengefahrenkarte Wuppertal (Alpha)'
+                appName="Starkregengefahrenkarte Wuppertal (Alpha)"
                 version={getApplicationVersion()}
-                hintergrundkartenText='True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | WebAtlasDE © BKG'
+                hintergrundkartenText="True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | WebAtlasDE © BKG"
                 taglineModelling={
                   <div>
-                    <b>Modellierung und Simulationsberechnung</b> (Version 2.0 | 12/2020):{" "}
+                    <b>Modellierung und Simulationsberechnung</b> (Version 2.0 |
+                    12/2020):{" "}
                     <a
-                      target='_customer'
-                      href='https://www.wsw-online.de/wsw-energie-wasser/privatkunden/'
+                      target="_customer"
+                      href="https://www.wsw-online.de/wsw-energie-wasser/privatkunden/"
                     >
                       WSW Energie und Wasser AG
                     </a>{" "}
                     |{" "}
-                    <a target='_pecher' href='https://www.pecher.de/'>
+                    <a target="_pecher" href="https://www.pecher.de/">
                       Dr. Pecher AG (Erkrath)
                     </a>
                   </div>
@@ -126,14 +131,14 @@ function App() {
             }
           />
         }
-        gazetteerSearchPlaceholder='Stadtteil | Adresse | POI | GEP'
+        gazetteerSearchPlaceholder="Stadtteil | Adresse | POI | GEP"
         emailaddress={email}
         initialState={config.initialState}
         config={config.config}
         homeZoom={18}
         homeCenter={[51.27202324060668, 7.20162372978018]}
-        modeSwitcherTitle='Starkregengefahrenkarte (Alpha)'
-        documentTitle='Starkregengefahrenkarte (Alpha) Wuppertal'
+        modeSwitcherTitle="Starkregengefahrenkarte (Alpha)"
+        documentTitle="Starkregengefahrenkarte (Alpha) Wuppertal"
         gazData={gazData}
       />
     </TopicMapContextProvider>
