@@ -100,7 +100,7 @@ const Component = ({ simulationsklammer }) => {
           <p>
             Unter <b>Animation</b> finden Sie einen Wechselschalter zum An- und
             Ausschalten einer animierten Darstellung des Fließgeschehens
-            (Strömungsdarstellung), , die aber nur im Modus "Maximalwerte"
+            (Strömungsdarstellung), die aber nur im Modus "Maximalwerte"
             verfügbar und hier standardmäßig aktiviert ist. Die
             Strömungsdarstellung basiert auf den Maximalbeträgen der
             Geschwindigkeitsvektoren, die für jede 1x1 m-Rasterzelle im Verlauf
