@@ -44,18 +44,40 @@ const Component = () => {
           </p>
 
           <p>
-            Die Simulationen basieren auf einem Digitalen Geländemodell (DGM)
-            von Wuppertal, abgeleitet aus flächenhaften Höhenmessungen, die das
-            Land NRW turnusmäßig mit einem Laserscanner aus einem Flugzeug
-            heraus durchführt (verwendeter Datenstand überwiegend Anfang 2015).
-            Das DGM wurde um die Gebäude aus dem Wuppertaler
-            Liegenschaftskataster und das Kanalnetz inklusive verrohrter
-            Gewässerabschnitte aus der Kanalnetzdatenbank der WSW Energie &amp;
-            Wasser AG ergänzt, um eine hydrologisch korrekte Abflussberechnung
-            zu gewährleisten. Für eine präzisere Simulation des Fließgeschehens
-            wurden ab Version 2.0 der Simulationsberechnungen 39 Brücken manuell
-            rekonstruiert und zehn Regenrückhaltebecken des Wupperverbandes
-            mitsamt ihren Zuleitungen berücksichtigt.
+            Die Simulationen basieren auf dem Digitalen Geländemodell (DGM) von
+            Wuppertal, abgeleitet aus flächenhaften Höhenmessungen, die das Land
+            NRW turnusmäßig mit einem Laserscanner aus einem Flugzeug heraus
+            durchführt (verwendeter Datenstand überwiegend Anfang 2015). Das DGM
+            wurde um die Gebäude aus dem Wuppertaler Liegenschaftskataster und
+            verrohrte Gewässerabschnitte aus der Kanalnetzdatenbank der WSW
+            Energie &amp; Wasser AG sowie weitere Durchlässe ergänzt, um eine
+            hydrologisch korrekte Abflussberechnung zu gewährleisten. Ab Version
+            2.1 wird die Wupper mit einem unendlichen Fassungsvermögen für das
+            zufließende Regenwasser modelliert. Es kann in den Simulationen nun
+            also nicht mehr zu einem Rückstau kommen, bei dem das Regenwasser
+            Flächen in der Talsohle überflutet, weil es von der Wupper nicht
+            mehr abgeleitet werden kann. Die Überflutungen, die durch hohe
+            Pegelstände entlang der Wupper und einiger wichtiger Zuflüsse der
+            Wupper entstehen können, werden in den Hochwassergefahrenkarten des
+            Landes NRW dargestellt. Die Stadt Wuppertal wird den hieraus für
+            Wuppertal relevanten Ausschnitt in einer interaktiven
+            "Hochwassergefahrenkarte Wuppertal" nach dem Vorbild der
+            Starkregengefahrenkarte bereitstellen und beide Kartenanwendungen so
+            miteinander koppeln, dass man die Gefahr durch beide Szenarien -
+            Starkregen und Flusshochwasser - gut beurteilen kann.{" "}
+            <strong>
+              Bei kleineren Gewässern wie dem Mirker Bach wird die Überlagerung
+              der Überflutungen durch ablaufendes Regenwasser und über die Ufer
+              tretendes Gewässer in der Starkregengefahrenkarte abgebildet. Bei
+              der Wupper, einem Gewässer mit einem großen hydrologischen
+              Einzugsgebiet überwiegend außerhalb des Wuppertaler Stadtgebietes,
+              ist das nicht gegeben. Die Gefahr einer Überflutung durch die über
+              die Ufer tretende Wupper sollte daher nur anhand einer
+              Hochwassergefahrenkarte beurteilt werden.
+            </strong>{" "}
+            Weitere Verbesserungen in Version 2.1 der Simulationsberechnungen
+            betreffen die Beseitigung einzelner kleinräumiger Fehler im
+            Geländemodell, die Nutzer*innen jederzeit interaktiv melden können.
           </p>
 
           <p>
