@@ -115,8 +115,8 @@ function App() {
                 hintergrundkartenText="True Orthophoto 2022, Amtliche Basiskarte (ABK), Hillshade © Stadt Wuppertal | Stadtkarte 2.0 © RVR | WebAtlasDE © BKG"
                 taglineModelling={
                   <div>
-                    <b>Modellierung und Simulationsberechnung</b> (Version 2.0 |
-                    12/2020):{" "}
+                    <b>Modellierung und Simulationsberechnung</b> (Version 2.1 |
+                    10/2022):{" "}
                     <a
                       target="_customer"
                       href="https://www.wsw-online.de/wsw-energie-wasser/privatkunden/"
