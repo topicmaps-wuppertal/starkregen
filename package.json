@@ -35,7 +35,7 @@
     "newSnapshot": "npm version preminor --preid=SNAPSHOT && npm run postversion",
     "bumpSnapshot": "npm version prerelease --preid=SNAPSHOT && npm run postversion",
     "postbuild": "ls -d build > /dev/null && git rev-parse --short HEAD && echo $npm_package_version && git rev-parse --short HEAD > build/githash && echo $npm_package_version > build/version",
-    "postversion": "echo Postversionhook && rm .version && rm .githash && sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version && echo $npm_package_version > .version && git rev-parse HEAD > .githash"
+    "postversion": "echo Postversionhook && rm .version ; rm .githash ; sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version && echo $npm_package_version > .version && git rev-parse HEAD > .githash"
   },
   "eslintConfig": {
     "extends": [
