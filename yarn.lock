@@ -2649,9 +2649,9 @@
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
 "@cismet-dev/react-cismap-rainhazardmaps@~1.10.0":
-  version "1.10.3"
-  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.10.3/d91c3e57ed08f0c51afe21a8f0f0e9a170eaf6fc#d91c3e57ed08f0c51afe21a8f0f0e9a170eaf6fc"
-  integrity sha512-nigYt8tJ8jNVjCoNROn49dHWGFquaT2xrzBoLweqzlczZaWSsWHPx0HBCwlIur168nmxhEcC/Y6bK7bgxVYc8w==
+  version "1.10.4"
+  resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.10.4/947d83cf73a0ff601ffe15065c665ba9940345e3#947d83cf73a0ff601ffe15065c665ba9940345e3"
+  integrity sha512-rAaOskN/6iREvH9rNZrP/0T2c4SG5gZsjFye17BkYB0fDF5czFXU291kTBIwckWpXnp7Ha4lvXU9ijObrs/73Q==
   dependencies:
     "@testing-library/jest-dom" "^5.14.1"
     "@testing-library/react" "^12.0.0"
