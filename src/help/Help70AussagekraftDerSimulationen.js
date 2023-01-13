@@ -40,8 +40,7 @@ const Component = () => {
               Teile des Regenwassers können in der Realität durch{" "}
               <strong>Verdunstung</strong> verschwinden. Diesen Effekt haben wir
               aus fachlichen Gründen bewusst vernachlässigt. Die Verdunstung
-              spielt im Starkregenfall nur eine untergeordnete Rolle und die
-              Versickerung ist stark von den Ausgangsbedingungen abhängig.
+              spielt im Starkregenfall nur eine untergeordnete Rolle.
             </li>
           </ul>
           <p>
@@ -82,19 +81,12 @@ const Component = () => {
               Überzeichnung der Wassertiefen, die sich bei einem realen Regen
               der angenommenen Stärke einstellen würden, bestehen.
             </strong>{" "}
-            Wenn es z. B. in den Tagen vor dem angenommenen Starkregenereignis
-            schon so viel geregnet hätte, dass der Boden mit Wasser gesättigt
-            ist, würde der Effekt der Versickerung ja tatsächlich wegfallen! Es
-            bleibt aber eine gewisse Tendenz zur lokalen Überzeichnung der
-            Wassertiefen, die sich bei einem realen Regen der angenommenen
-            Stärke einstellen würden. Um diesem Umstand Rechnung zu tragen,
-            geben wir bei der{" "}
+            Um diesem Umstand Rechnung zu tragen, geben wir bei der{" "}
             <a
               class="renderAsLink"
               onClick={() => setAppMenuActiveMenuSection("wasserstand")}
             >
-              Abfrage der maximalen Wassertiefe oder der maximalen
-              Fließgeschwindigkeit
+              Abfrage der Wassertiefe oder der Fließgeschwindigkeit
             </a>{" "}
             ab einer berechneten Wassertiefe von 150 cm nur noch "größer als 150
             cm" ({">"} 150 cm) und ab einer berechneten Fließgeschwindigkeit von
