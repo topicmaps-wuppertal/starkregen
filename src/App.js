@@ -139,7 +139,7 @@ function App() {
         config={config.config}
         homeZoom={18}
         homeCenter={[51.27202324060668, 7.20162372978018]}
-        modeSwitcherTitle="Starkregengefahrenkarte (Alpha)"
+        modeSwitcherTitle="Starkregengefahrenkarte"
         documentTitle="Starkregengefahrenkarte Wuppertal"
         gazData={gazData}
       />
