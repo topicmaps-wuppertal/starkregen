@@ -1,9 +1,9 @@
 {
   "name": "rainhazardmap-wuppertal",
-  "version": "2.1.8",
+  "version": "3.0.0-SNAPSHOT.17",
   "private": true,
   "dependencies": {
-    "@cismet-dev/react-cismap-rainhazardmaps": "1.7.13",
+    "@cismet-dev/react-cismap-rainhazardmaps": "~1.10.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -32,8 +32,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "newSnapshot": "npm version preminor --preid=SNAPSHOT && npm run postversion",
+    "bumpSnapshot": "npm version prerelease --preid=SNAPSHOT && npm run postversion",
     "postbuild": "ls -d build > /dev/null && git rev-parse --short HEAD && echo $npm_package_version && git rev-parse --short HEAD > build/githash && echo $npm_package_version > build/version",
-    "postversion": "echo Postversionhook && rm .version && rm .githash && sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version && echo $npm_package_version > .version && git rev-parse HEAD > .githash"
+    "postversion": "echo Postversionhook && rm .version ; rm .githash ; sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version && echo $npm_package_version > .version && git rev-parse HEAD > .githash"
   },
   "eslintConfig": {
     "extends": [
