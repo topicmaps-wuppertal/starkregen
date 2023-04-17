@@ -190,7 +190,10 @@ function App() {
                 message:
                   e.target.feature.properties.titel +
                   " - " +
-                  e.target.feature.properties.kategorie,
+                  e.target.feature.properties.kategorie +
+                  " (" +
+                  e.target.feature.properties.status +
+                  ")",
                 description: e.target.feature.properties.beschreibung,
 
                 placement: "topRight",
