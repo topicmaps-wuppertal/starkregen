@@ -2664,7 +2664,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cismet-dev/react-cismap-rainhazardmaps@~1.10.0":
+"@cismet-dev/react-cismap-rainhazardmaps@^1.10.9":
   version "1.10.9"
   resolved "https://npm.pkg.github.com/download/@cismet-dev/react-cismap-rainhazardmaps/1.10.9/47af6e6e790fb2e33922b8c5dbc7c9360c184bde#47af6e6e790fb2e33922b8c5dbc7c9360c184bde"
   integrity sha512-pJnPzLLhxyat8EltK20k2gooB1PVMLPJck5Ib4GUC4BiF+cJ37qkyuO00I8tcJO5U9RreEESTDLvRaUYTBDKig==
@@ -11635,7 +11635,7 @@ polygon-clipping@^0.15.3:
   dependencies:
     splaytree "^3.1.0"
 
-"polylabel@github:mapbox/polylabel":
+polylabel@mapbox/polylabel:
   version "1.1.0"
   resolved "https://codeload.github.com/mapbox/polylabel/tar.gz/07c112091b4c9ffeb412af33c575133168893b4a"
   dependencies:
