@@ -16,6 +16,9 @@ import ModellfehlerMelden from "@cismet-dev/react-cismap-rainhazardmaps/componen
 import Haftungsausschluss from "./help/Help90HaftungsausschlussWupp";
 import Footer from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help99Footer";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
+import { md5FetchJSON } from "react-cismap/tools/fetching";
+import ProjGeoJson from "react-cismap/ProjGeoJson";
+import { notification } from "antd";
 
 import config from "./config";
 import { getApplicationVersion } from "./version";
@@ -23,7 +26,13 @@ import { getApplicationVersion } from "./version";
 function App() {
   const email = "starkregen@stadt.wuppertal.de";
   const [gazData, setGazData] = useState([]);
+  const [hinweisData, setHinweisData] = useState([]);
+  const [hinweisShown, setHinweisShown] = useState(false);
 
+  const hinweisShownRef = React.useRef(hinweisShown);
+  useEffect(() => {
+    hinweisShownRef.current = hinweisShown;
+  }, [hinweisShown]);
   const getGazData = async (setData) => {
     const prefix = "GazDataForStarkregengefahrenkarteByCismet";
     const sources = {};
@@ -70,8 +79,34 @@ function App() {
     setData(gazData);
   };
 
+  const getHinweisData = async (setHinweisData, url) => {
+    const prefix = "HinweisDataForStarkregengefahrenkarteByCismet";
+    const data = await md5FetchJSON(prefix, url);
+
+    const features = [];
+    let id = 1;
+    for (const d of data) {
+      features.push({
+        type: "Feature",
+        id: id++,
+        properties: d,
+        geometry: d.geojson,
+        crs: {
+          type: "name",
+          properties: {
+            name: "urn:ogc:def:crs:EPSG::25832",
+          },
+        },
+      });
+    }
+    console.log("yy hinweisData", features);
+
+    setHinweisData(features || []);
+  };
+
   useEffect(() => {
     getGazData(setGazData);
+    getHinweisData(setHinweisData, config.config.hinweisDataUrl);
   }, []);
   return (
     <TopicMapContextProvider
@@ -142,7 +177,42 @@ function App() {
         modeSwitcherTitle="Starkregengefahrenkarte"
         documentTitle="Starkregengefahrenkarte Wuppertal"
         gazData={gazData}
-      />
+      >
+        <ProjGeoJson
+          featureClickHandler={(e) => {
+            // e.originalEvent.stopImmediatePropagation();
+            if (hinweisShownRef.current === false) {
+              console.log("e.target.feature.properties", e);
+
+              notification.info({
+                style: { width: 430, marginTop: 30, marginRight: -13 },
+                duration: 15,
+                message:
+                  e.target.feature.properties.titel +
+                  " - " +
+                  e.target.feature.properties.kategorie,
+                description: e.target.feature.properties.beschreibung,
+
+                placement: "topRight",
+                onClose: () => {
+                  setHinweisShown(false);
+                },
+              });
+              setHinweisShown(true);
+            }
+          }}
+          key={hinweisData.length + "gewaesser"}
+          style={(feature) => {
+            return {
+              fillColor: "#525C55",
+              fillOpacity: 0.7,
+              weight: 0,
+            };
+          }}
+          opacity={1}
+          featureCollection={hinweisData}
+        />
+      </HeavyRainHazardMap>
     </TopicMapContextProvider>
   );
 }
