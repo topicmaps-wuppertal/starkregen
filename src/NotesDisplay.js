@@ -13,7 +13,7 @@ export default function NotesDisplay({ hinweisData }) {
     hinweisShownRef.current = hinweisShown;
   }, [hinweisShown]);
   return (
-    currentZoom < 18 && (
+    currentZoom >= 18 && (
       <ProjGeoJson
         featureClickHandler={(e) => {
           // e.originalEvent.stopImmediatePropagation();
