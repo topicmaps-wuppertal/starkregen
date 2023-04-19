@@ -17,22 +17,16 @@ import Haftungsausschluss from "./help/Help90HaftungsausschlussWupp";
 import Footer from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help99Footer";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
 import { md5FetchJSON } from "react-cismap/tools/fetching";
-import ProjGeoJson from "react-cismap/ProjGeoJson";
-import { notification } from "antd";
 
 import config from "./config";
 import { getApplicationVersion } from "./version";
+import NotesDisplay from "./NotesDisplay";
 
 function App() {
   const email = "starkregen@stadt.wuppertal.de";
   const [gazData, setGazData] = useState([]);
   const [hinweisData, setHinweisData] = useState([]);
-  const [hinweisShown, setHinweisShown] = useState(false);
 
-  const hinweisShownRef = React.useRef(hinweisShown);
-  useEffect(() => {
-    hinweisShownRef.current = hinweisShown;
-  }, [hinweisShown]);
   const getGazData = async (setData) => {
     const prefix = "GazDataForStarkregengefahrenkarteByCismet";
     const sources = {};
@@ -108,6 +102,7 @@ function App() {
     getGazData(setGazData);
     getHinweisData(setHinweisData, config.config.hinweisDataUrl);
   }, []);
+
   return (
     <TopicMapContextProvider
       appKey={"cismetRainhazardMap.Wuppertal"}
@@ -178,43 +173,7 @@ function App() {
         documentTitle="Starkregengefahrenkarte Wuppertal"
         gazData={gazData}
       >
-        <ProjGeoJson
-          featureClickHandler={(e) => {
-            // e.originalEvent.stopImmediatePropagation();
-            if (hinweisShownRef.current === false) {
-              console.log("e.target.feature.properties", e);
-
-              notification.info({
-                style: { width: 430, marginTop: 30, marginRight: -13 },
-                duration: 15,
-                message:
-                  e.target.feature.properties.titel +
-                  " - " +
-                  e.target.feature.properties.kategorie +
-                  " (" +
-                  e.target.feature.properties.status +
-                  ")",
-                description: e.target.feature.properties.beschreibung,
-
-                placement: "topRight",
-                onClose: () => {
-                  setHinweisShown(false);
-                },
-              });
-              setHinweisShown(true);
-            }
-          }}
-          key={hinweisData.length + "gewaesser"}
-          style={(feature) => {
-            return {
-              fillColor: "#525C55",
-              fillOpacity: 0.7,
-              weight: 0,
-            };
-          }}
-          opacity={1}
-          featureCollection={hinweisData}
-        />
+        <NotesDisplay hinweisData={hinweisData} />
       </HeavyRainHazardMap>
     </TopicMapContextProvider>
   );
