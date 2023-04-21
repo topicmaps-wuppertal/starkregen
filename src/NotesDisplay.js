@@ -26,8 +26,7 @@ export default function NotesDisplay({ hinweisData }) {
               message: (
                 <span>
                   <b>{e.target.feature.properties.titel}</b> -{" "}
-                  {e.target.feature.properties.kategorie} (
-                  {e.target.feature.properties.status})
+                  {e.target.feature.properties.kategorie}
                 </span>
               ),
               description: e.target.feature.properties.beschreibung,
