@@ -12,7 +12,7 @@ import ZeitlicherVerlauf from "./help/Help45ZeitlicherVerlauf";
 import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
 import SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
 import Aussagekraft from "./help/Help70AussagekraftDerSimulationen";
-import ModellfehlerMelden from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help80ModellfehlerMelden";
+import ModellfehlerMelden from "./help//Help80ModellfehlerMelden";
 import Haftungsausschluss from "./help/Help90HaftungsausschlussWupp";
 import Footer from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help99Footer";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
