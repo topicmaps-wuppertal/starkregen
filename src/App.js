@@ -12,17 +12,20 @@ import ZeitlicherVerlauf from "./help/Help45ZeitlicherVerlauf";
 import WasserstandAbfragen from "./help/Help50WasserstandAbfragen";
 import SimulierteSzenarien from "./help/Help60SimulierteSzenarien";
 import Aussagekraft from "./help/Help70AussagekraftDerSimulationen";
-import ModellfehlerMelden from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help80ModellfehlerMelden";
+import ModellfehlerMelden from "./help//Help80ModellfehlerMelden";
 import Haftungsausschluss from "./help/Help90HaftungsausschlussWupp";
 import Footer from "@cismet-dev/react-cismap-rainhazardmaps/components/customizablehelp/Help99Footer";
 import { getGazDataForTopicIds } from "react-cismap/tools/gazetteerHelper";
+import { md5FetchJSON } from "react-cismap/tools/fetching";
 
 import config from "./config";
 import { getApplicationVersion } from "./version";
+import NotesDisplay from "./NotesDisplay";
 
 function App() {
   const email = "starkregen@stadt.wuppertal.de";
   const [gazData, setGazData] = useState([]);
+  const [hinweisData, setHinweisData] = useState([]);
 
   const getGazData = async (setData) => {
     const prefix = "GazDataForStarkregengefahrenkarteByCismet";
@@ -70,9 +73,36 @@ function App() {
     setData(gazData);
   };
 
+  const getHinweisData = async (setHinweisData, url) => {
+    const prefix = "HinweisDataForStarkregengefahrenkarteByCismet";
+    const data = await md5FetchJSON(prefix, url);
+
+    const features = [];
+    let id = 1;
+    for (const d of data) {
+      features.push({
+        type: "Feature",
+        id: id++,
+        properties: d,
+        geometry: d.geojson,
+        crs: {
+          type: "name",
+          properties: {
+            name: "urn:ogc:def:crs:EPSG::25832",
+          },
+        },
+      });
+    }
+    console.log("yy hinweisData", features);
+
+    setHinweisData(features || []);
+  };
+
   useEffect(() => {
     getGazData(setGazData);
+    getHinweisData(setHinweisData, config.config.hinweisDataUrl);
   }, []);
+
   return (
     <TopicMapContextProvider
       appKey={"cismetRainhazardMap.Wuppertal"}
@@ -142,7 +172,9 @@ function App() {
         modeSwitcherTitle="Starkregengefahrenkarte"
         documentTitle="Starkregengefahrenkarte Wuppertal"
         gazData={gazData}
-      />
+      >
+        <NotesDisplay hinweisData={hinweisData} />
+      </HeavyRainHazardMap>
     </TopicMapContextProvider>
   );
 }
